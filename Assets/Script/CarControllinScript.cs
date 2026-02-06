@@ -32,6 +32,7 @@ public class CarControllinScript : MonoBehaviour
         GetInput();
         Steering();
         ApplyBrakes();
+        PowerStering();
     }
     void GetInput()
     {
@@ -69,6 +70,14 @@ public class CarControllinScript : MonoBehaviour
         FrontLeftWheelCollider.steerAngle = steeringAngle*horizontalInput;
         FrontRightWheelCollider.steerAngle = steeringAngle*horizontalInput;
 
+    }
+    void PowerStering()
+    {
+        if (horizontalInput == 0)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.Euler(0f,0f,0f), Time.deltaTime );
+        }
+       
     }
     void UpdateWheels()
     {

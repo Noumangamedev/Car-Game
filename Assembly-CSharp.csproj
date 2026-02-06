@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\EndlessScript.cs" />
+    <Compile Include="Assets\Script\Camera movement.cs" />
     <Compile Include="Assets\Script\CarControllinScript.cs" />
     <Compile Include="Assets\Script\Car Follow.cs" />
   </ItemGroup>
